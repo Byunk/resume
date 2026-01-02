@@ -1,0 +1,140 @@
+\documentclass[10pt,a4paper]{article}
+
+% Packages
+\usepackage[margin=0.5in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+
+% Colors
+\definecolor{linkblue}{RGB}{0,102,204}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkblue,
+    urlcolor=linkblue,
+}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{8pt}{4pt}
+
+% Remove page numbers
+\pagenumbering{gobble}
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item #1}
+\newcommand{\resumeSubheading}[4]{
+    \item[]
+    \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+        \textbf{#1} & #2 \\
+        \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\begin{document}
+
+%----------HEADER----------
+\begin{center}
+    {\LARGE \textbf{Kyungho Byoun}} \\[6pt]
+    \faEnvelope\ \href{mailto:kyungho.byoun@gmail.com}{kyungho.byoun@gmail.com} \quad
+    \faLinkedin\ \href{https://www.linkedin.com/in/kyungho-byoun/}{linkedin.com/in/kyungho-byoun} \quad
+    \faGithub\ \href{https://github.com/Byunk}
+{github.com/Byunk}
+\end{center}
+
+\vspace{-4pt}
+\begin{center}
+    \textit{Software developer expertise in large scale data engineering. Passionate about building data-driven products from 0 to 1.}
+\end{center}
+
+%----------EXPERIENCE----------
+\section{Experience}
+\begin{itemize}[leftmargin=0pt, label={}]
+    \resumeSubheading
+        {Software Developer}{Apr 2024 -- Present}
+        {SAP}{Seoul, South Korea}
+    \begin{itemize}[leftmargin=12pt, label=\textbullet, nosep, topsep=4pt]
+        \item Architected and implemented a petabyte-scale observability microservice aggregating telemetry from \textbf{60} global regions and \textbf{375} Kubernetes clusters into a unified Delta Lake using Spark and HANA Data Lake Files.
+        \item Designed end-to-end data pipelines serving worldwide teams with 30+ tables and growing, enabling previously impossible analyses such as Major Upgrade Window downtime tracking across pod lifecycle events.
+        \item Built an LLM-powered analytics chatbot with RAG for natural language querying of observability data. Achieved \textbf{41.6}\% accuracy on complex internal NL-to-SQL benchmarks tailored to business context.
+    \end{itemize}
+
+    \resumeSubheading
+        {Intern}{Jul 2023 -- Apr 2024}
+        {SAP}{Seoul, South Korea}
+    \begin{itemize}[leftmargin=12pt, label=\textbullet, nosep, topsep=4pt]
+        \item Conducted a PoC using Istio service mesh to enable local-remote cluster integration. Submitted for US patent as the primary contributor.
+        \item Developed a combinational graybox test automation pipeline for HANA DB, identifying \textbf{11} bugs in production versions.
+    \end{itemize}
+
+    \resumeSubheading
+        {Undergraduate Researcher}{Jul 2022 -- Jun 2023}
+        {KAIST Augmented Reality Research Center}{Daejeon, South Korea}
+    \begin{itemize}[leftmargin=12pt, label=\textbullet, nosep, topsep=4pt]
+        \item Designed and implemented a 5-stage sleep estimation algorithm for smart mattress integration using digital signal processing in MATLAB and Python.
+        \item Iterated through testing with 5 participants from Kyung Dong Navien; achieved only \textbf{5.61}\% difference compared to Galaxy Watch (ECG-based) benchmark.
+    \end{itemize}
+\end{itemize}
+
+%----------EDUCATION----------
+\section{Education}
+\begin{itemize}[leftmargin=0pt, label={}]
+    \resumeSubheading
+        {Korea Advanced Institute of Science and Technology (KAIST)}{Daejeon, South Korea}
+        {Bachelor of Engineering in Computer Science, Aerospace Engineering}{Mar 2017 -- Feb 2024}
+\end{itemize}
+
+%----------PROJECTS----------
+\section{Projects}
+\begin{itemize}[leftmargin=0pt, label={}]
+    \resumeSubheading
+        {\href{https://www.branchy.io/}{Branchy.io} \faExternalLink*}{Ongoing}
+        {Side Project}{}
+    \begin{itemize}[leftmargin=12pt, label=\textbullet, nosep, topsep=4pt]
+        \item Building an ideation platform that visualizes ideas in graph with LLM-powered understanding and enhancement.
+    \end{itemize}
+    
+    \resumeSubheading
+        {\href{https://drive.google.com/file/d/1E7P0ng33f29_aVWq5d71I94I23YkFpmM/view?pli=1}{NASA Space Apps Challenge}}{2025}
+        {Honorable Mention}{}
+    \begin{itemize}[leftmargin=12pt, label=\textbullet, nosep, topsep=4pt]
+        \item Developed risk analysis of Korean west/east coast power plants based on SAR dataset.
+    \end{itemize}
+
+    \resumeSubheading
+        {\href{https://github.com/KAIST-Google-Solution-Challenge}{Google Solution Challenge}}{2023}
+        {Global Top 100, Team Lead}{}
+    \begin{itemize}[leftmargin=12pt, label=\textbullet, nosep, topsep=4pt]
+        \item Developed a real-time scam detection application using BERT and Google Cloud, aimed at protecting socially disadvantaged individuals.
+    \end{itemize}
+
+    \resumeSubheading
+        {KAIST App Startup Competition}{Jul 2022 -- Dec 2022}
+        {\$\textbf{5,500} Award, Team Lead}{}
+    \begin{itemize}[leftmargin=12pt, label=\textbullet, nosep, topsep=4pt]
+        \item Proposed solutions and business strategies to address the supply and demand imbalance in the carbon credit market.
+    \end{itemize}
+
+    \resumeSubheading
+        {Open Source Contributor}{Lifelong}
+        {Agno, Langchain, SQL Metadata}
+        {}
+\end{itemize}
+
+%----------SKILLS----------
+\section{Skills}
+\begin{itemize}[leftmargin=0pt, label={}, nosep]
+    \item[] \textbf{Professional:} Python, Spark, Delta Lake, Kubernetes \quad \textbf{Proficient:} React
+\end{itemize}
+
+%----------LANGUAGES----------
+\section{Languages}
+\begin{itemize}[leftmargin=0pt, label={}, nosep]
+    \item[] \textbf{Korean:} Native or Bilingual Proficiency \quad \textbf{English:} Professional Working Proficiency
+\end{itemize}
+
+\end{document}
